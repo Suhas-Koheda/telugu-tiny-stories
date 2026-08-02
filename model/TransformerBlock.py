@@ -1,9 +1,9 @@
-from RMSNorm import RMSNorm
-from MHA import MHA
-from SwiGLU import SwiGLU
-
 import torch 
 import torch.nn as nn
+from .RMSNorm import RMSNorm
+from .MHA import MHA
+from .SwiGLU import SwiGLU
+
 class TransformerBlock(nn.Module):
     def __init__(self,cfg):
         super().__init__()

@@ -1,8 +1,9 @@
-from TransformerBlock import TransformerBlock
-from Embedding import Embedding
-from RMSNorm import RMSNorm
 import torch
 import torch.nn as nn
+from .TransformerBlock import TransformerBlock
+from .Embedding import Embedding
+from .RMSNorm import RMSNorm
+
 class Llama(nn.Module):
     def __init__(self,cfg):
         super().__init__()

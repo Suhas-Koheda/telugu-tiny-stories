@@ -1,8 +1,7 @@
-from datasets import load_dataset
 import torch
-from torch.utils.data import DataLoader,Dataset
-
-from BPE import BPE
+from torch.utils.data import DataLoader, Dataset
+from datasets import load_dataset
+from model.BPE import BPE
 
 def load_dataset_():
     telugu_stories=load_dataset("neuralnets/multilingual-tinystories", split="te")
@@ -34,3 +33,4 @@ def create_loader(txt,tokenizer,batch_size=4,max_length=256,stride=128,shuffle=T
 )
     dataloader=DataLoader(dataset,batch_size=batch_size,shuffle=shuffle,drop_last=drop_last)
     return dataloader
+

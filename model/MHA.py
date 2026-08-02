@@ -1,7 +1,8 @@
 import math
 import torch
 import torch.nn as nn
-from ROPE import ROPE
+from .ROPE import ROPE
+
 class MHA(nn.Module):
     def __init__(self,cfg):
         super().__init__()
